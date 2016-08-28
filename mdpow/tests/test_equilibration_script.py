@@ -24,4 +24,9 @@ class TestEquilibriumScript(object):
             assert False
 
     def test_basic_run(self):
-        self._run_equil('water','benzene/')
+        try:
+            self._run_equil('water','benzene/')
+        except:
+            assert False
+        finally:
+            os.chdir(self.old_path)
