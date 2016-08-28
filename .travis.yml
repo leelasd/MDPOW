@@ -47,6 +47,7 @@ install:
 
   # source gromacs
   - if [[ $GMX_VERSION == "4.6.7" ]]; then curl https://raw.githubusercontent.com/Becksteinlab/GromacsWrapper/develop/gromacs/templates/gromacswrapper_465.cfg -o ~/.gromacswrapper.cfg;
+    else curl https://github.com/Becksteinlab/GromacsWrapper/blob/develop/gromacs/templates/gromacswrapper.cfg -o ~/.gromacswrapper.cfg;
     fi 
   - source $($HOME/get_gmx $GMX_VERSION)
   
