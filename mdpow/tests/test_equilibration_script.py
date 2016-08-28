@@ -14,7 +14,7 @@ class TestEquilibriumScript(object):
 
     def _run_equil(self, solvent, dirname):
         try:
-            cfg = get_configuration(runfile)
+            cfg = get_configuration('runinput.yml')
             self.S = equilibrium_simulation(cfg, solvent, dirname=dirname)
         except:
             assert False
