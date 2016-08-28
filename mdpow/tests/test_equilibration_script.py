@@ -10,7 +10,7 @@ class TestEquilibriumScript(object):
         self.old_path = os.getcwd()
         self.resources = self.old_path + "/mdpow/tests/testing_resources"
         m = manifest.Manifest(os.path.join(self.resources,'manifest.yml'))
-        m.assemble('base',self.tmpdir)
+        m.assemble('base',self.tmpdir.name)
 
     def _run_equil(self, solvent, dirname):
         try:
