@@ -3,6 +3,9 @@ import tempdir as td
 import os
 import manifest
 
+from mdpow.run import equilibrium_simulation
+from mdpow.config import get_configuration
+
 class TestEquilibriumScript(object):
     
     def setup(self):
