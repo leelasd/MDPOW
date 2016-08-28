@@ -20,4 +20,4 @@ class TestEquilibriumScript(object):
             assert False
 
     def test_basic_run(self):
-        _run_equil('water','benzene/')
+        self._run_equil('water','benzene/')
