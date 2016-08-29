@@ -24,7 +24,7 @@ class TestFEPScript(object):
     def test_basic_run(self):
         os.chdir(self.tmpdir.name)
         try:
-            self._run_equil('water','benzene/')
+            self._run_fep('water','benzene/')
         except:
             assert False
         finally:
