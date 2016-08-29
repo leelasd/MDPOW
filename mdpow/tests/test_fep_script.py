@@ -18,7 +18,7 @@ class TestFEPScript(object):
         try:
             cfg = get_configuration('runinput.yml')
             S = mdpow.equil.Simulation(filename=dirname+'water.simulation')
-            simbasedir = os.path.join('bezene','Equilibrium', 'water')
+            simbasedir = os.path.join(os.realpath(os.path.curdir),'Equilibrium', 'water')
             S.make_paths_relative(simbasedir)
             S.save(dirname+'water.simulation')
             self.S = fep_simulation(cfg, solvent, dirname=dirname)
