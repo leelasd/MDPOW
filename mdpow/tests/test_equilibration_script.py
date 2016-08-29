@@ -26,6 +26,7 @@ class TestEquilibriumScript(object):
         os.chdir(self.tmpdir.name)
         try:
             self._run_equil('water','benzene/')
+            self._new_structures()
         except:
             assert False
         finally:
