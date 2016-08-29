@@ -12,7 +12,6 @@ class TestFEPScript(object):
         self.old_path = os.getcwd()
         self.resources = self.old_path + "/mdpow/tests/testing_resources"
         self.m = manifest.Manifest(os.path.join(self.resources,'manifest.yml'))
-        print(os.listdir(self.tmpdir.name))
         self.m.assemble('md_npt',self.tmpdir.name)
 
     def _run_fep(self, solvent, dirname):
