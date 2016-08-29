@@ -11,9 +11,9 @@ class TestFEPScript(object):
         self.tmpdir = td.TempDir()
         self.old_path = os.getcwd()
         self.resources = self.old_path + "/mdpow/tests/testing_resources"
-        m = manifest.Manifest(os.path.join(self.resources,'manifest.yml'))
+        self.m = manifest.Manifest(os.path.join(self.resources,'manifest.yml'))
         print(os.listdir(self.tmpdir.name))
-        m.assemble('md_npt',self.tmpdir.name)
+        self.m.assemble('md_npt',self.tmpdir.name)
 
     def _run_fep(self, solvent, dirname):
         try:
